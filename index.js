@@ -5,10 +5,7 @@ let endGame = false;
 
 for (const item of gridItems) {
   item.addEventListener("click", function () {
-    if (endGame) {
-      return;
-    }
-
+   
     let value = item.getAttribute("value");
     let index = value - 1;
     if (boardArray[index] == "o" || boardArray[index] == "x") {
@@ -48,6 +45,10 @@ for (const item of gridItems) {
       alertify.alert(`${winner} Won!`);
        endGame = true;
     }
+     if (endGame) {
+      return;
+    }
+
 
     var isDraw = true;
     for (element of boardArray) {
