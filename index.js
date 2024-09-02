@@ -30,7 +30,8 @@ for (const item of gridItems) {
     }
 
     document.getElementById("instructions").textContent = `${current} turn`;
-  });
+  })
+}
 
   function evaluate() {
     if (
@@ -41,7 +42,7 @@ for (const item of gridItems) {
       (boardArray[2] == boardArray[5] && boardArray[5] == boardArray[8]) ||
       (boardArray[3] == boardArray[4] && boardArray[4] == boardArray[5]) ||
       (boardArray[6] == boardArray[7] && boardArray[7] == boardArray[8]) ||
-      (boardArray[3] == boardArray[4] && boardArray[4] == boardArray[6])
+      (boardArray[2] == boardArray[4] && boardArray[4] == boardArray[6])
     ) {
       var winner = current == "o" ? "o" : "x";
       endGame = true;
