@@ -45,8 +45,8 @@ for (const item of gridItems) {
       (boardArray[2] == boardArray[4] && boardArray[4] == boardArray[6])
     ) {
       var winner = current == "o" ? "o" : "x";
-      endGame = true;
       alertify.alert(`${winner} Won!`);
+       endGame = true;
     }
 
     var isDraw = true;
